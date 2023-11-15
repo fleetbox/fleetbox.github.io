@@ -74,6 +74,40 @@ function eraseText() {
   }
 }
 
+var terms = document.getElementById("terms-pop-up");
+var refund = document.getElementById("refund-pop-up");
+var privacy = document.getElementById("privacy-pop-up");
+var close = document.getElementsByClassName("close");
+var body = document.getElementById("page-top");
+
+function getToc () {
+  terms.style.display = "block";
+  refund.style.display = "none";
+  privacy.style.display = "none";
+  body.style.overflow = "hidden";
+}
+
+function getRefund () {
+  terms.style.display = "none";
+  refund.style.display = "block";
+  privacy.style.display = "none";
+  body.style.overflow = "hidden";
+}
+
+function getPrivacy () {
+  terms.style.display = "none";
+  refund.style.display = "none";
+  privacy.style.display = "block";
+  body.style.overflow = "hidden";
+}
+
+function closePopUp () {
+  terms.style.display = "none";
+  refund.style.display = "none";
+  privacy.style.display = "none";
+  body.style.overflow = "visible";
+}
+
 // Start typing effect when the page loads
 window.onload = typeText;
 AOS.init({
